@@ -31,5 +31,31 @@ function presetupdates() {
     .format("dddd, MMM D, YYYY");
   nytime.innerHTML = moment().tz("America/New_York").format("HH:mm:ss");
 }
+
+function updatecity(event) {
+  let timezone = event.target.value;
+  if (event.target.value.length > 0) {
+    if (timezone === "current") {
+      timezone = moment.tz.guess();
+    }
+    let cityname = timezone.replace("_", " ").split("/")[1];
+    let citydate = moment().tz(timezone).format("dddd, MMMM D, YYYY");
+    let citytime = moment().tz(timezone).format("HH:mm:ss");
+    let citychange = document.querySelector("#presetcity");
+    citychange.innerHTML = `
+    <div class="row setcity">
+            <div class="col">
+              <h2>${cityname}</h2>
+              <small class="date">${citydate}</small>
+            </div>
+            <div class="col time">${citytime}</div>
+          </div>
+          `;
+  }
+}
+
 presetupdates();
 setInterval(presetupdates, 1000);
+
+let citychoice = document.querySelector("#citychange");
+citychoice.addEventListener("change", updatecity);
