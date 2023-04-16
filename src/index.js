@@ -50,6 +50,9 @@ function updatecity(event) {
             </div>
             <div class="col time">${citytime}</div>
           </div>
+          <div class="homepage" > <a href="/index.html" 
+          >Home Page</a
+        ></div>
           `;
   }
 }

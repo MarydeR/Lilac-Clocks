@@ -36,6 +36,7 @@ small {
   border-radius: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 40px;
+  padding-bottom: 20px;
   margin-top: 70px;
 }
 select {
@@ -63,6 +64,19 @@ select {
   font-size: 40px;
   text-align: right;
   padding: 0;
+}
+
+.homepage {
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+.homepage a {
+  color: var(--primary-color);
+}
+.homepage a:hover {
+  color: var(--dark-color);
+  transition: all 200ms ease-in-out;
 }
 
 footer {
