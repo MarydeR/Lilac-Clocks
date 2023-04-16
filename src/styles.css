@@ -2,7 +2,26 @@
   --primary-color: #8e6aad;
   --secondary-color: #c6a2cb;
   --tertiary-color: #e4cee1;
+  --dark-color: #4d287b;
 }
-footer{
-    font-family: monospace;
+body {
+  font-family: "Nunito", sans-serif;
+
+  background: linear-gradient(
+    109.6deg,
+    rgb(177, 173, 219) 11.2%,
+    rgb(245, 226, 226) 91.1%
+  );
+}
+footer {
+  font-family: monospace;
+  color: var(--dark-color);
+}
+footer a {
+  color: var(--dark-color);
+  transition: all 200ms ease-in-out;
+}
+
+footer a:hover {
+  color: var(--primary-color);
 }
