@@ -13,6 +13,12 @@ body {
     rgb(245, 226, 226) 91.1%
   );
 }
+h1 {
+  text-align: center;
+  color: var(--dark-color);
+  font-weight: bold;
+  font-size: 60px;
+}
 footer {
   font-family: monospace;
   color: var(--dark-color);
