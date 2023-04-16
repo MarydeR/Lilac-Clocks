@@ -1,33 +1,81 @@
 :root {
   --primary-color: #8e6aad;
   --secondary-color: #c6a2cb;
-  --tertiary-color: #e4cee1;
+  --tertiary-color: #ffeefc;
   --dark-color: #4d287b;
 }
 body {
   font-family: "Nunito", sans-serif;
-
-  background: linear-gradient(
-    109.6deg,
-    rgb(177, 173, 219) 11.2%,
-    rgb(245, 226, 226) 91.1%
-  );
+  background-color: var(--tertiary-color);
+  color: var(--dark-color);
 }
 h1 {
   text-align: center;
-  color: var(--dark-color);
   font-weight: bold;
   font-size: 60px;
 }
+h2 {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+small {
+  padding: 0;
+  font-size: 12px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.appcontent {
+  background: linear-gradient(
+    109.6deg,
+    rgb(177, 173, 219) 11.2%,
+    rgb(226, 206, 237) 91.1%
+  );
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 40px;
+  margin-top: 70px;
+}
+select {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.presetcity {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+}
+.setcity {
+  padding-top: 10px;
+  border-bottom: 1px dashed var(--primary-color);
+}
+.setcity:last-child {
+  border: none;
+}
+
+.time {
+  font-size: 40px;
+  text-align: right;
+  padding: 0;
+}
+
 footer {
+  font-size: small;
+  padding-left: 20px;
+  margin: 5px;
   font-family: monospace;
-  color: var(--dark-color);
 }
 footer a {
-  color: var(--dark-color);
+  color: var(--primary-color);
   transition: all 200ms ease-in-out;
 }
 
 footer a:hover {
-  color: var(--primary-color);
+  color: var(--dark-color);
 }
